@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header id="header">
+        <a href="#" class="logo">Travel the World</a>
+        <div class="menuToggle" onclick="ToggleMenu();"></div>
+        <div class="navigation">
+            <div class="navArea">
+                <ul>
+                    <li>
+                        <a href="index.html" onmouseenter="changeImage('images/travel.jpeg')">Home</a>
+                    </li>
+                    <li>
+                        <a href="tokyo.html" onmouseenter="changeImage('images/tbn.jpeg')">Tokyo</a>
+                    </li>
+                    <li>
+                        <a href="tulum.html" onmouseenter="changeImage('images/tulum01.jpeg')">Tulum</a>
+                    </li>
+                    <li>
+                        <a href="zanzibar.html" onmouseenter="changeImage('images/zanzibar1.jpeg')">Zanzibar</a>
+                    </li>
+                    <li>
+                        <a href="venice.html" onmouseenter="changeImage('images/venise1.jpeg')">Venice</a>
+                    </li>
+                    <li>
+                        <a href="weather.html" onmouseenter="changeImage('images/weather1.jpeg')">Weather</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="imgArea">
+                <img src="images/travel.jpeg" alt="colorful street" id="slider">
+            </div>
+    </header>
+
+
+
+    <div class="vid">
+        <div class="container">
+            <video class="first" src="videos/travel.mp4" muted autoplay loop type="mp4" id="video"></video>
+        </div>
+
+        <div class="textBox">
+            <h1>Don't waste your time</h1>
+            <h2>And travel the world</h2>
+            <p>Discover places you've never been. Memories will be yours forever. </p>
+            <a href="#seemore">EXPLORE</a>
+        </div>
+    </div>
+    <div class="choice">
+        <h2>Choose your destination</h2>
+    </div>
+
+    <div class="imageRow">
+        <a href="tokyo.html">
+            <div class="image">
+                <img class="image__img" src="images/tbn1.jpeg" alt="Bricks">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title">Tokyo</div>
+                </div>
+            </div>
+        </a>
+        <a href="tulum.html">
+            <div class="image2">
+                <img class="image__img2" src="images/tul5.jpeg" alt="Bricks">
+                <div class="image__overlay2 image__overlay--primary2">
+                    <div class="image__title2">Tulum</div>
+                </div>
+            </div>
+        </a>
+        <a href="zanzibar.html">
+            <div class="image3">
+                <img class="image__img3" src="images/zanz2.jpeg" alt="Bricks">
+                <div class="image__overlay3 image__overlay--primary3">
+                    <div class="image__title3">Zanzibar</div>
+                </div>
+            </div>
+        </a>
+        <a href="venice.html">
+            <div class="image4">
+                <img class="image__img3" src="images/venice6.jpeg" alt="Bricks">
+                <div class="image__overlay3 image__overlay--primary3">
+                    <div class="image__title3">Venice</div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="container" id="readmore">
+        <p>Go out of your comfort zones, and leave your footprints all around the world.</p>
+        <p class="second">“Jobs fill your pocket but adventures fill your soul.” ~ Jamie Lyn Beatty</p>
+    </div>
+    <footer>
+        <div class="copyright">
+            <p>Copyright © 2021 OURE Judith</p>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

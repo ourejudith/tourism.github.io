@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheater</title>
+    <link rel="stylesheet" href="weather.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <a href="#" class="logo">Travel the World</a>
+        <div class="menuToggle" onclick="ToggleMenu();"></div>
+        <div class="navigation">
+            <div class="navArea">
+                <ul>
+                    <li>
+                        <a href="index.html" onmouseenter="changeImage('images/travel.jpeg')">Home</a>
+                    </li>
+                    <li>
+                        <a href="tokyo.html" onmouseenter="changeImage('images/tbn.jpeg')">Tokyo</a>
+                    </li>
+                    <li>
+                        <a href="tulum.html" onmouseenter="changeImage('images/tulum01.jpeg')">Tulum</a>
+                    </li>
+                    <li>
+                        <a href="zanzibar.html" onmouseenter="changeImage('images/zanzibar1.jpeg')">Zanzibar</a>
+                    </li>
+                    <li>
+                        <a href="venice.html" onmouseenter="changeImage('images/venise1.jpeg')">Venice</a>
+                    </li>
+                    <li>
+                        <a href="weather.html" onmouseenter="changeImage('images/weather1.jpeg')">Weather</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="imgArea">
+                <img src="images/travel.jpeg" alt="traveling goodies" id="slider">
+
+            </div>
+    </header>
+
+    <div class="weatherImg">
+        <img src="images/weather1.jpeg" alt="">
+    </div>
+
+
+    <form id="form">
+        <input type="text" id="search" placeholder="Search by location" autocomplete="off">
+    </form>
+    <main id="main">
+        <div class="main"></div>
+
+    </main>
+
+
+    <script src="weather.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Rancho&family=Roboto&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #fff;
+}
+
+header {
+    background: wheat;
+}
+
+.logo {
+    line-height: 70px;
+    color: white;
+    font-weight: 700;
+    font-size: 2em;
+    cursor: pointer;
+    padding-left: 20px;
+    text-decoration: none;
+}
+
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 26vh;
+    background: #111;
+    transition: 0.2s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.navigation.active {
+    visibility: visible;
+    z-index: 999;
+    opacity: 1;
+}
+
+.navigation .navArea {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    background-color: black;
+}
+
+.navigation .navArea ul li {
+    list-style: none;
+    padding: 1.5%;
+}
+
+.navigation .navArea ul li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    z-index: -1;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.navigation .navArea ul li:nth-child(1)::before {
+    background: rgb(100, 56, 30);
+}
+
+.navigation .navArea ul li:nth-child(2)::before {
+    background: #420347;
+}
+
+.navigation .navArea ul li:nth-child(3)::before {
+    background: #60aa7b;
+}
+
+.navigation .navArea ul li:nth-child(4)::before {
+    background: #dfdd93;
+}
+
+.navigation .navArea ul li:nth-child(5)::before {
+    background: #750404;
+}
+
+.navigation .navArea ul li:nth-child(6)::before {
+    background: #137ac7;
+}
+
+.navigation .navArea ul li:hover::before {
+    opacity: 1;
+}
+
+.navigation .navArea ul li a {
+    font-size: 2em;
+    font-weight: 600;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.navigation .navArea ul li:hover a {
+    color: rgba(255, 255, 255, 1);
+}
+
+.navigation .navArea ul {
+    display: flex;
+    margin-right: 20%;
+}
+
+.imgArea {
+    position: relative;
+    width: 50%;
+    height: 100vh;
+    background: #f00;
+}
+
+.imgArea img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+}
+
+.vid {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.vid video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(1);
+    pointer-events: none;
+}
+
+.vid .textBox {
+    position: relative;
+    max-width: 51%;
+    margin-top: 5%;
+    z-index: 2;
+    text-align: center;
+}
+
+.vid .textBox h1 {
+    color: #ffc14e;
+    font-size: 6em;
+    font-weight: bolder;
+    font-family: 'Dancing Script', cursive;
+    position: absolute;
+    margin: -66px;
+}
+
+.vid .textBox h2 {
+    color: #fff;
+    font-size: 3em;
+    text-align: center;
+    position: relative;
+}
+
+.vid .textBox p {
+    color: #fff;
+    font-size: 1.4em;
+}
+
+.banner .textBox p {
+    color: #fff;
+    font-size: 1.1em;
+    margin: 5px 0 25px;
+}
+
+.vid .textBox a {
+    position: relative;
+    display: inline-block;
+    background: #fff;
+    color: #ffc14e;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500px;
+    margin-left: 35%;
+    font-weight: 900;
+}
+
+.vid .textBox a:hover {
+    background: #ffc14e;
+    color: #fff;
+}
+
+.choice {
+    text-align: center;
+}
+
+.choice h2 {
+    font-size: 35px;
+    font-weight: bolder;
+    padding: 3% 0;
+    color: wheat;
+}
+
+.choice h2:hover {
+    color: #ffc14e;
+}
+
+.imageRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 5%;
+}
+
+.image,
+.image2,
+.image3,
+.image4 {
+    position: relative;
+    width: 300px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.image__img,
+.image__img2,
+.image__img3,
+.image__img4 {
+    display: block;
+    width: 70%;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.image__overlay,
+.image__overlay2,
+.image__overlay3,
+.image__overlay4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.image__overlay--blur,
+.image__overlay--blur2,
+.image__overlay--blur3,
+.image__overlay--blur4 {
+    backdrop-filter: blur(5px);
+}
+
+.image__overlay--primary,
+.image__overlay--primary2,
+.image__overlay--primary3,
+.image__overlay--primary4 {
+    border-radius: 50%;
+}
+
+.image__overlay>*,
+.image__overlay2>*,
+.image__overlay3>*,
+.image__overlay4>* {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.image__overlay:hover,
+.image__overlay2:hover,
+.image__overlay3:hover,
+.image__overlay4:hover {
+    opacity: 1;
+}
+
+.image__overlay:hover>*,
+.image__overlay2:hover>*,
+.image__overlay3:hover>*,
+.image__overlay4:hover>* {
+    transform: translateY(0);
+}
+
+.image__title,
+.image__title2,
+.image__title3,
+.image__title4 {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.menuToggle {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    background: wheat url(images/menu.png);
+    border: solid 1px #f1cf90;
+    z-index: 1000;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.menuToggle.active {
+    background: #000 url(images/close.png);
+    z-index: 1000;
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(1);
+}
+
+.container {
+    text-align: center;
+    padding-top: 4%;
+}
+
+.container p {
+    color: wheat;
+    font-size: 20px;
+    padding-bottom: 2%;
+}
+
+.container p:hover {
+    color: #ffc14e;
+}
+
+.container p.second {
+    font-size: 30px;
+}
+
+footer {
+    background: wheat;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copyright p {
+    color: #fff;
+}
+
+@media (min-width: 1200px) {
+    .vid .textBox h1 {
+        font-size: 5em;
+    }
+    .vid .textBox a {
+        margin-left: 3%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .vid .textBox h1 {
+        font-size: 4.5em;
+    }
+    .vid .textBox a {
+        margin-left: 4%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .vid .textBox h1 {
+        font-size: 4em;
+    }
+    .vid .textBox a {
+        margin-left: 0%;
+    }
+    .vid {
+        min-height: 65vh;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .vid .textBox h1 {
+        font-size: 3.8em;
+    }
+}
+
+@media (max-width: 768px) {
+    .menuToggle {
+        position: absolute;
+    }
+    .navigation {
+        height: 100vh;
+    }
+    .navigation .navArea {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+    }
+    .navigation .navArea ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-right: 0;
+    }
+    .navigation .navArea ul li {
+        background: #fff;
+        margin: 5px 10px;
+        padding: 5px 10px;
+        border-radius: 20px;
+    }
+    .navigation .navArea ul li:nth-child(1):hover {
+        background: rgb(100, 56, 30);
+    }
+    .navigation .navArea ul li:nth-child(2):hover {
+        background: #420347;
+    }
+    .navigation .navArea ul li:nth-child(3):hover {
+        background: #60aa7b;
+    }
+    .navigation .navArea ul li:nth-child(4):hover {
+        background: #dfdd93;
+    }
+    .navigation .navArea ul li:nth-child(5):hover {
+        background: #750404;
+    }
+    .navigation .navArea ul li:nth-child(6):hover {
+        background: #137ac7;
+    }
+    .navigation .navArea ul li a {
+        color: #000;
+        font-size: 2em;
+        letter-spacing: 2px;
+    }
+    .navigation .navArea ul li:hover::before {
+        opacity: 0;
+    }
+    .imgArea {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: #f00;
+        opacity: 0.7;
+    }
+    .vid .textBox h1 {
+        color: #ffc14e;
+        margin: -60px;
+        font-size: 3em;
+    }
+    .vid .textBox a {
+        margin-left: 17%;
+    }
+    .vid .textBox h2 {
+        color: #fff;
+        font-size: 3em;
+        position: relative;
+    }
+    .vid .textBox {
+        text-align: inherit;
+    }
+}
+
+@media only screen and (min-width: 414px) and (max-width: 736px) {
+    .vid .textBox h1 {
+        margin: -40px;
+        font-size: 2em;
+    }
+    .vid .textBox p {
+        display: none;
+    }
+    .vid .textBox h2 {
+        font-size: 2em;
+    }
+    .vid .textBox a {
+        margin-left: 6%;
+    }
+    .imageRow {
+        padding-left: 14%;
+    }
+}
+
+@media (max-width: 480px) {
+    .menuToggle {
+        right: 30px;
+    }
+    .navigation .navArea ul li a {
+        font-size: 1em;
+    }
+    .vid .textBox h1 {
+        margin: -55px;
+        font-size: 2em;
+    }
+    .vid .textBox h2 {
+        font-size: 1.7em;
+    }
+    .vid .textBox p {
+        display: none;
+    }
+    .vid .textBox a {
+        margin-left: 1%;
+    }
+    .logo {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 320px) {
+    .logo {
+        font-size: 1.3em;
+    }
+    .vid .textBox {
+        position: relative;
+        max-width: 100%;
+    }
+    .vid .textBox h1 {
+        font-size: 1.6em;
+    }
+    .vid .textBox h2 {
+        font-size: 1em;
+    }
+    .vid .textBox a {
+        margin-left: -13%;
+    }
+    .vid .textBox a {
+        padding: 10px 20px;
+        font-size: 1.2em;
+    }
+    .imageRow {
+        text-align: -webkit-center;
+        padding-left: 2%;
+    }
+    .image__overlay,
+    .image__overlay2,
+    .image__overlay3,
+    .image__overlay4 {
+        left: 43px;
+    }
+}

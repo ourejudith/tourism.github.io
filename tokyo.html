@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokyo</title>
+    <link rel="stylesheet" href="tokyo.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+</head>
+
+<body>
+    <header id="header">
+        <a href="#" class="logo">Travel the World</a>
+        <div class="menuToggle" onclick="ToggleMenu();"></div>
+        <div class="navigation">
+            <div class="navArea">
+                <ul>
+                    <li>
+                        <a href="index.html" onmouseenter="changeImage('images/travel.jpeg')">Home</a>
+                    </li>
+                    <li>
+                        <a href="tokyo.html" onmouseenter="changeImage('images/tbn.jpeg')">Tokyo</a>
+                    </li>
+                    <li>
+                        <a href="tulum.html" onmouseenter="changeImage('images/tulum01.jpeg')">Tulum</a>
+                    </li>
+                    <li>
+                        <a href="zanzibar.html" onmouseenter="changeImage('images/zanzibar1.jpeg')">Zanzibar</a>
+                    </li>
+                    <li>
+                        <a href="venice.html" onmouseenter="changeImage('images/venise1.jpeg')">Venice</a>
+                    </li>
+                    <li>
+                        <a href="weather.html" onmouseenter="changeImage('images/weather1.jpeg')">Weather</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="imgArea">
+                <img src="images/travel.jpeg" alt="traveling goodies" id="slider">
+
+
+            </div>
+    </header>
+
+
+
+    <div class="picture">
+        <div class="title">
+            <h1>Tokyo</h1>
+        </div>
+        <div class="container">
+
+            <img src="images/tbn3.jpeg" alt="tokyo' streets">
+
+        </div>
+    </div>
+
+    <div class="big_container">
+        <h1>Don't limit yourself <br> and travel the world</h1>
+
+
+        <div class="container2">
+            <div class="main-img">
+                <img src="images/tbn.jpeg">
+            </div>
+            <div class="min-img">
+                <img class="active" src="images/tbn1.jpeg">
+                <img src="images/tbn3.jpeg">
+                <img src="images/tbn.jpeg">
+                <img src="images/tbn1.jpeg">
+                <img src="images/tbn3.jpeg">
+                <img src="images/tokyo.jpeg">
+                <img src="images/tokyo1.jpeg">
+            </div>
+        </div>
+
+        <div class="container3">
+            <h3>See what it has to offer</h3>
+            <h4>Don't wait any longer</h4>
+            <h5>And lose yourself in Tokyo</h5>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="banner">
+        <p>Want to see more of Tokyo ?</p>
+
+        <div class="newsletter">Click here <i class="far fa-hand-point-up"></i></div>
+    </div>
+    <div class="popup">
+        <video class="first" src="videos/JapanTokyo.mp4" muted autoplay loop type="mp4" id="slider"></video>
+        <i class="close-popup fas fa-times"></i>
+    </div>
+
+    <footer>
+        <div class="copyright">
+            <p>Copyright © 2021 OURE Judith</p>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
